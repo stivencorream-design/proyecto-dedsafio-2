@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>STIVEN HACKER</title>
+
+<style>
+body {
+    background: black;
+    color: #00ff00;
+    font-family: monospace;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    text-shadow: 0 0 10px lime;
+}
+
+#terminal {
+    border: 1px solid lime;
+    padding: 20px;
+    margin: 20px;
+    height: 250px;
+    overflow: auto;
+    text-align: left;
+}
+
+button {
+    background: black;
+    color: lime;
+    border: 2px solid lime;
+    padding: 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+</style>
+</head>
+
+<body>
+
+<h1>ayudame a unirme a dedsafio</h1>
+<p>SISTEMA DE SIMULACIÓN</p>
+
+<div id="terminal">
+    > Sistema iniciado...<br>
+    > Esperando comando...
+</div>
+
+<button onclick="hackear()">ayudame a entrar a dedsafio</button>
+
+<script>
+function hackear() {
+    let terminal = document.getElementById("terminal");
+
+    terminal.innerHTML = "";
+
+    let mensajes = [
+        "> Iniciando simulación...",
+        "> Analizando sistema...",
+        "> Cargando códigos...",
+        "> Procesando datos...",
+        "> Acceso simulado...",
+        "> SISTEMA ACTIVADO",
+        "> JAJAJA ahora q crees nay, una vez presiones el boton, ya toda tu info es mia, muchas gracias",
+        "> BY STIVENCRO3883"
+    ];
+
+    let i = 0;
+
+    let intervalo = setInterval(function() {
+        terminal.innerHTML += mensajes[i] + "<br>";
+        terminal.scrollTop = terminal.scrollHeight;
+        i++;
+
+        if (i >= mensajes.length) {
+            clearInterval(intervalo);
+        }
+    }, 1000);
+}
+</script>
+
+</body>
+</html>
